@@ -89,8 +89,14 @@ textarea:focus {
   outline: none;
 }
 
-/* New styles for icons */
 h2 i {
   margin-right: 8px;
   color: var(--accent);
+}
+
+header h2 {
+  color: #fff;
+  text-align: center;
+  font-size: 1.2rem;
+  margin-top: -10px;
 }
