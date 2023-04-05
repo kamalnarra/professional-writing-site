@@ -27,10 +27,23 @@ document.getElementById("renderContent").addEventListener("click", () => {
   const htmlContent = document.getElementById("htmlContent").value;
   const renderedContent = document.getElementById("renderedContent");
 
+  // Clear the previous content
+  renderedContent.innerHTML = "";
+
   if (htmlContent.trim() === "") {
     renderedContent.innerHTML = "Please paste HTML content.";
   } else {
-    renderedContent.innerHTML = htmlContent;
+    // Create an iframe element
+    const iframe = document.createElement("iframe");
+    iframe.width = "100%";
+    iframe.height = "500px";
+    iframe.style.border = "1px solid #ccc";
+
+    // Set the srcdoc attribute to the HTML content
+    iframe.srcdoc = htmlContent;
+
+    // Append the iframe to the renderedContent element
+    renderedContent.appendChild(iframe);
   }
 });
 
