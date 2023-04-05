@@ -5,6 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Internet Basics</title>
     <link rel="stylesheet" href="styles.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.0/css/all.min.css"
+      integrity="sha384-KyZXEAg3QhqLMpG8r+Knujsl7/1L_dstPt3W4j4izglt/YPD3p8UKDl6C6t/h5L9"
+      crossorigin="anonymous"
+    />
   </head>
   <body>
     <header>
@@ -13,30 +19,33 @@
     <main>
       <!-- Simplified URL section -->
       <div class="info">
-        <h2>Step 1: Type a Web Address</h2>
+        <h2>Step 1: Enter a URL</h2>
         <p>
-          When you type a web address in your browser, it asks the website's
-          server for the web page. The web address has parts like "http," a
-          domain name, and sometimes more. First, the browser finds the server's
-          IP address. It does this using DNS, which is like a phone book for the
-          internet.
+          When you type a website address (URL) into your browser, your browser
+          sends a request to find the website. The URL has parts like the
+          protocol ("http" or "https"), the domain name ("example.com"), and
+          sometimes a specific page or resource on the website. The browser's
+          first task is to find the website's IP address (a unique number) using
+          a process called DNS resolution.
         </p>
       </div>
       <div class="interactive">
-        <input type="text" id="url" placeholder="Type a web address" />
-        <button id="sendRequest">Ask for Web Page</button>
+        <input type="text" id="url" placeholder="Enter a URL" />
+        <button id="sendRequest">Send Request</button>
         <p id="response"></p>
       </div>
 
       <!-- Simplified DNS resolution section -->
       <div class="info">
-        <h2>Step 2: DNS</h2>
+        <h2><i class="fas fa-server"></i> Step 2: DNS Resolution</h2>
         <p>
-          The browser asks a DNS server for the IP address of the website's
-          server. DNS helps turn domain names into IP addresses that computers
-          can understand. DNS uses a few servers to find the right IP address.
-          Then, the browser asks the web server for the website using HTTP or
-          HTTPS.
+          To find the website's IP address, the browser asks a DNS (Domain Name
+          System) server for help. The DNS server acts like a phonebook for the
+          internet, turning domain names we can read into IP addresses that
+          computers can understand. This process usually involves several DNS
+          servers working together to find the IP address. Once the browser has
+          the IP address, it asks the website's server for the content using
+          HTTP or HTTPS.
         </p>
       </div>
       <div class="interactive">
@@ -47,12 +56,17 @@
 
       <!-- Simplified rendering section -->
       <div class="info">
-        <h2>Step 3: Show Web Page</h2>
+        <h2>
+          <i class="fas fa-paint-brush"></i> Step 3: Rendering Web Content
+        </h2>
         <p>
-          The browser gets the website from the server as HTML, CSS, and
-          JavaScript files. It uses these files to show the web page on your
-          screen. The browser makes a tree from the HTML, styles it with CSS,
-          and runs JavaScript for interactions.
+          The browser gets the website content from the server, usually as HTML,
+          CSS, and JavaScript files. It then uses these files to show the
+          website on your screen. The browser first reads the HTML to build the
+          DOM (Document Object Model) tree, which is like a blueprint for the
+          website's structure. Next, the browser applies the CSS to decide how
+          each part of the website should look. Finally, the browser runs the
+          JavaScript code to make the website interactive and dynamic.
         </p>
       </div>
       <div class="interactive">
@@ -66,11 +80,16 @@
 
       <!-- Simplified web server response section -->
       <div class="info">
-        <h2>Step 4: Server Answers</h2>
+        <h2><i class="fas fa-reply"></i> Step 4: Web Server Response</h2>
         <p>
-          Web servers deal with browser requests and give back the website. They
-          send a status code to show if the request worked or not, like 200 OK,
-          404 Not Found, or 500 Internal Server Error.
+          Web servers handle incoming requests from browsers and give back the
+          content they ask for. When a web server gets a request, it processes
+          the request and creates an appropriate response. This response usually
+          includes a status code, which tells the browser if the request was
+          successful or not, as well as the data it asked for (like HTML, CSS,
+          or JavaScript files). Common status codes include 200 OK (request was
+          successful), 404 Not Found (requested resource not found), and 500
+          Internal Server Error (server had an error processing the request).
         </p>
       </div>
       <div class="interactive">
@@ -81,14 +100,18 @@
 
       <!-- New web security section -->
       <div class="info">
-        <h2>Step 5: Web Security</h2>
+        <h2><i class="fas fa-shield-alt"></i> Step 5: Web Security</h2>
         <p>
-          Web security is important to keep data private and safe during
-          information transfer. HTTPS is a secure version of HTTP that protects
-          data from unauthorized access or changes. Browsers also have security
-          features to safeguard users from various attacks. To check if a
-          website is using HTTPS, look for a padlock icon in the browser's
-          address bar.
+          Web security is essential for keeping your information private and
+          safe while it moves between browsers and servers. HTTPS (Hypertext
+          Transfer Protocol Secure) is a more secure version of HTTP that uses
+          encryption to protect your data. SSL/TLS (Secure Sockets
+          Layer/Transport Layer Security) is the technology that makes this
+          encryption possible. Browsers also have security features like the
+          Same-Origin Policy and Content Security Policy to protect you from
+          harmful online activities like cross-site scripting (XSS) and
+          cross-site request forgery (CSRF). To see if a website is secure, look
+          for a padlock icon in your browser's address bar.
         </p>
       </div>
       <div class="interactive">
