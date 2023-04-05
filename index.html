@@ -3,69 +3,56 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>How the Internet Works</title>
+    <title>Internet Basics</title>
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
     <header>
-      <h1>How the Internet Works</h1>
+      <h1>Internet Basics</h1>
     </header>
     <main>
-      <!-- Updated URL section -->
+      <!-- Simplified URL section -->
       <div class="info">
-        <h2>Step 1: Enter a URL</h2>
+        <h2>Step 1: Type a Web Address</h2>
         <p>
-          When you enter a URL in your browser , it sends a request to the
-          server where the website is hosted. The URL consists of several
-          components, such as the protocol (e.g., "http" or "https"), the domain
-          name (e.g., "example.com"), and, optionally, the path to a specific
-          page or resource on the website. The browser's first task is to
-          determine the IP address of the server hosting the website. This is
-          accomplished through a process called DNS resolution.
+          When you type a web address in your browser, it asks the website's
+          server for the web page. The web address has parts like "http," a
+          domain name, and sometimes more. First, the browser finds the server's
+          IP address. It does this using DNS, which is like a phone book for the
+          internet.
         </p>
       </div>
       <div class="interactive">
-        <input type="text" id="url" placeholder="Enter a URL" />
-        <button id="sendRequest">Send Request</button>
+        <input type="text" id="url" placeholder="Type a web address" />
+        <button id="sendRequest">Ask for Web Page</button>
         <p id="response"></p>
       </div>
 
-      <!-- Updated DNS resolution section -->
+      <!-- Simplified DNS resolution section -->
       <div class="info">
-        <h2>Step 2: DNS Resolution</h2>
+        <h2>Step 2: DNS</h2>
         <p>
-          The browser sends a request to a DNS server to resolve the domain name
-          into an IP address. DNS (Domain Name System) works like a phonebook
-          for the internet, translating human-readable domain names into IP
-          addresses that computers understand. DNS resolution typically involves
-          several DNS servers, starting with a recursive resolver, which
-          contacts other DNS servers, such as root, TLD, and authoritative
-          servers, to obtain the IP address associated with the domain name.
-          Once the browser receives the IP address, it sends an HTTP or HTTPS
-          request to the web server to request the content of the website.
+          The browser asks a DNS server for the IP address of the website's
+          server. DNS helps turn domain names into IP addresses that computers
+          can understand. DNS uses a few servers to find the right IP address.
+          Then, the browser asks the web server for the website using HTTP or
+          HTTPS.
         </p>
       </div>
       <div class="interactive">
-        <input type="text" id="domain" placeholder="Enter a domain" />
-        <button id="resolveDns">Resolve DNS</button>
+        <input type="text" id="domain" placeholder="Type a domain" />
+        <button id="resolveDns">Find IP Address</button>
         <p id="dnsResponse"></p>
       </div>
 
-      <!-- Updated rendering section -->
+      <!-- Simplified rendering section -->
       <div class="info">
-        <h2>Step 3: Rendering Web Content</h2>
+        <h2>Step 3: Show Web Page</h2>
         <p>
-          The browser receives the web content from the server, typically in the
-          form of HTML, CSS, and JavaScript files. The browser then processes
-          these files to render the web page on your screen. First, the browser
-          parses the HTML to construct the DOM (Document Object Model) tree,
-          which represents the structure of the web page. Next, the browser
-          processes the CSS to determine the style and layout of each element on
-          the page. Finally, the browser executes any JavaScript code to add
-          interactivity and dynamic content to the web page. Web browsers use
-          rendering engines (e.g., Blink for Chrome and Edge, WebKit for Safari,
-          and Gecko for Firefox) to perform these tasks and display the web page
-          on your screen.
+          The browser gets the website from the server as HTML, CSS, and
+          JavaScript files. It uses these files to show the web page on your
+          screen. The browser makes a tree from the HTML, styles it with CSS,
+          and runs JavaScript for interactions.
         </p>
       </div>
       <div class="interactive">
@@ -73,22 +60,17 @@
           id="htmlContent"
           placeholder="Paste HTML content here"
         ></textarea>
-        <button id="renderContent">Render Content</button>
+        <button id="renderContent">Show Web Content</button>
         <div id="renderedContent"></div>
       </div>
-      <!-- New web server response section -->
+
+      <!-- Simplified web server response section -->
       <div class="info">
-        <h2>Step 4: Web Server Response</h2>
+        <h2>Step 4: Server Answers</h2>
         <p>
-          Web servers handle incoming requests from browsers and return the
-          requested content. When a web server receives a request, it processes
-          the request and generates an appropriate response. This response
-          typically contains the status code, which indicates the success or
-          failure of the request, as well as any requested data, such as HTML,
-          CSS, or JavaScript files. Common status codes include 200 OK (request
-          succeeded), 404 Not Found (requested resource not found), and 500
-          Internal Server Error (server encountered an error processing the
-          request).
+          Web servers deal with browser requests and give back the website. They
+          send a status code to show if the request worked or not, like 200 OK,
+          404 Not Found, or 500 Internal Server Error.
         </p>
       </div>
       <div class="interactive">
@@ -101,16 +83,12 @@
       <div class="info">
         <h2>Step 5: Web Security</h2>
         <p>
-          Web security is crucial for maintaining the privacy and integrity of
-          data transmitted between browsers and servers. HTTPS (Hypertext
-          Transfer Protocol Secure) is a secure version of HTTP that encrypts
-          data using SSL/TLS (Secure Sockets Layer/Transport Layer Security) to
-          prevent unauthorized access or tampering. Additionally, browsers
-          implement security features, such as the Same-Origin Policy and
-          Content Security Policy, to protect users from cross-site scripting
-          (XSS), cross-site request forgery (CSRF), and other attacks. Users can
-          check for a padlock icon in the browser's address bar to verify that a
-          website is using HTTPS for secure communication.
+          Web security is important to keep data private and safe during
+          information transfer. HTTPS is a secure version of HTTP that protects
+          data from unauthorized access or changes. Browsers also have security
+          features to safeguard users from various attacks. To check if a
+          website is using HTTPS, look for a padlock icon in the browser's
+          address bar.
         </p>
       </div>
       <div class="interactive">
